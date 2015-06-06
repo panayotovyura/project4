@@ -1,0 +1,4 @@
+services:
+    routes_helper:
+        class:        Levi9\StudentsBundle\Helpers\RoutesHelper
+        arguments:    ["@=service('doctrine').getManager()"]
