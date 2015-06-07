@@ -1,0 +1,21 @@
+language: php
+php:
+  - 5.5
+  - 5.6
+  - 7
+  - hhvm
+  - nightly
+install:
+  - composer self-update
+  - composer install
+before_script:
+  - php app/console doctrine:database:create --env=test
+  - php app/console doctrine:schema:create --env=test
+  - php app/console doctrine:fixtures:load -n --env=test
+  - php app/console students:generate:routes --env=test
+script:
+  - phpunit -c app
+after_success:
+  - ./bin/phpcs --standard=psr2 src
+  - ./bin/phpmd src html cleancode,codesize,controversial,design,naming,unusedcode
+  - ./bin/phpcpd src
