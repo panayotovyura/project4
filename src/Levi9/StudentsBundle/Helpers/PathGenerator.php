@@ -40,15 +40,16 @@ class PathGenerator
         if (in_array($path, $this->currentPaths)) {
             $pathParts = explode(self::SPLIT_SYMBOL, $path);
             $lastPathPart = intval(array_pop($pathParts));
+
             if ($lastPathPart) {
                 return $this->getUniquePath(
                     implode(self::SPLIT_SYMBOL, $pathParts) . self::SPLIT_SYMBOL . (++$lastPathPart)
                 );
-            } else {
-                return $this->getUniquePath(
-                    $path . self::SPLIT_SYMBOL . '1'
-                );
             }
+
+            return $this->getUniquePath(
+                $path . self::SPLIT_SYMBOL . '1'
+            );
         }
 
         return $path;

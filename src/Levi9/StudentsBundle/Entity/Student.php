@@ -9,6 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
  *
  * @ORM\Table(indexes={@ORM\Index(name="path_idx", columns={"path"})})
  * @ORM\Entity
+ * @SuppressWarnings(PHPMD.ShortVariable)
  */
 class Student
 {

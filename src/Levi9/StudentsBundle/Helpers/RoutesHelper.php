@@ -32,15 +32,15 @@ class RoutesHelper
     {
         $query = $this->entityManager->createQuery('select u from Levi9\StudentsBundle\Entity\Student u');
         $queryIterator = $query->iterate();
-        $i = 0;
+        $iteration = 0;
         foreach ($queryIterator as $row) {
             $student = $row[0];
             $student->setPath($this->pathGenerator->generatePath($student->getName()));
-            if (($i % self::BATCH_SIZE) === 0) {
+            if (($iteration % self::BATCH_SIZE) === 0) {
                 $this->entityManager->flush();
                 $this->entityManager->clear();
             }
-            ++$i;
+            ++$iteration;
         }
         $this->entityManager->flush();
     }

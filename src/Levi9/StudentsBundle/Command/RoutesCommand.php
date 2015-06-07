@@ -19,17 +19,20 @@ class RoutesCommand extends ContainerAwareCommand
         ;
     }
 
+    /**
+     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
+     */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $s = microtime(true);
+        $startTime = microtime(true);
 
         $this->getContainer()->get('routes_helper')->generateRoutes();
 
-        $e = microtime(true);
+        $endTime = microtime(true);
 
         $output->writeln(
             'Time elapsed: ' .
-            round($e - $s, self::PRECISION) .
+            round($endTime - $startTime, self::PRECISION) .
             ' seconds' . PHP_EOL
         );
 
