@@ -1,3 +1,5 @@
+<a href="https://travis-ci.org/panayotovyura/project4" target=_blank><img src="https://travis-ci.org/panayotovyura/project4.svg?branch=master" alt="Build Status"></a>
+
 project4
 ========
 
