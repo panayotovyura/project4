@@ -1,0 +1,4 @@
+Levi9\StudentsBundle\Entity\Student:
+    student{1..10}:
+        name: Yura Panayotov
+        description: <text(500)>
