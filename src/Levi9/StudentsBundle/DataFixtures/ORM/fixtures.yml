@@ -2,4 +2,3 @@ Levi9\StudentsBundle\Entity\Student:
     student{1..25000}:
         name: <firstName()> <lastName()>
         description: <text(500)>
-        path: ''

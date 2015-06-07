@@ -1,4 +1,6 @@
 services:
     routes_helper:
         class:        Levi9\StudentsBundle\Helpers\RoutesHelper
-        arguments:    ["@=service('doctrine').getManager()"]
+        arguments:    ["@=service('doctrine').getManager()", @path_generator]
+    path_generator:
+        class:        Levi9\StudentsBundle\Helpers\PathGenerator

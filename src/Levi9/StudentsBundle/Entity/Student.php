@@ -31,14 +31,14 @@ class Student
     /**
      * @var string
      *
-     * @ORM\Column(name="description", type="text")
+     * @ORM\Column(name="description", type="text", nullable=true)
      */
     private $description;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="path", type="string", length=100)
+     * @ORM\Column(name="path", type="string", length=100, nullable=true)
      */
     private $path;
 
