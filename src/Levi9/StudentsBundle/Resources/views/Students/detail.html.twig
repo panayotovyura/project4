@@ -3,5 +3,5 @@
 {% block body %}
     <h1>{{ student.name }}</h1>
     <p>{{ student.description }}</p>
-    <p>{{ "now"|date() }}</p>
+    <p>{{ "now"|date('d.m.Y H:m:s') }}</p>
 {% endblock %}
