@@ -5,6 +5,7 @@ namespace Levi9\StudentsBundle\Helpers;
 use Doctrine\ORM\EntityManager;
 use Levi9\StudentsBundle\Helpers\PathGenerator;
 
+// todo: this class is not covered with unit tests
 class RoutesHelper
 {
     const BATCH_SIZE = 200;
@@ -30,6 +31,7 @@ class RoutesHelper
      */
     public function generateRoutes()
     {
+        // todo: it's better to store queries in repository class
         $query = $this->entityManager->createQuery('select u from Levi9\StudentsBundle\Entity\Student u');
         $queryIterator = $query->iterate();
         $iteration = 0;

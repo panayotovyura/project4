@@ -27,6 +27,7 @@ class PathGeneratorTest extends WebTestCase
         return [
             [
                 [
+                    // todo: add different special chars to test if they are replaced
                     'yura_panayotov' => 'Yura Panayotov',
                     'yura_panayotov_1' => 'Yura Panayotov',
                     'yura_panayotov_2' => 'Yura Panayotov',

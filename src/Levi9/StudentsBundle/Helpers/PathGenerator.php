@@ -37,6 +37,7 @@ class PathGenerator
             return $path;
         }
 
+        // todo: implementation can be improved
         if (in_array($path, $this->currentPaths)) {
             $pathParts = explode(self::SPLIT_SYMBOL, $path);
             $lastPathPart = intval(array_pop($pathParts));
