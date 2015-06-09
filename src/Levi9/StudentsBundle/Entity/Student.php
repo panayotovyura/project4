@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Student
  *
  * @ORM\Table(indexes={@ORM\Index(name="path_idx", columns={"path"})})
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="StudentRepository")
  * @SuppressWarnings(PHPMD.ShortVariable)
  */
 class Student

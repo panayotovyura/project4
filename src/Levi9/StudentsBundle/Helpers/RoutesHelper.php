@@ -31,8 +31,10 @@ class RoutesHelper
      */
     public function generateRoutes()
     {
-        // todo: it's better to store queries in repository class
-        $query = $this->entityManager->createQuery('select u from Levi9\StudentsBundle\Entity\Student u');
+        $query = $this->entityManager
+            ->getRepository('Levi9StudentsBundle:Student')
+            ->getAllStudentsQuery();
+
         $queryIterator = $query->iterate();
         $iteration = 0;
         foreach ($queryIterator as $row) {
